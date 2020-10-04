@@ -1,27 +1,17 @@
-<table *ngIf="products">
-  <thead>
-    <tr>
-      <!-- <th>Id</th> -->
-      <th>Name</th>
-      <th>Cost</th>
-      <th>Proteins</th>
-      <th>Fats</th>
-      <th>Carbohydrates</th>
-      <th>Calories</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let product of products" (click)="onSelectElement(product)">
-      <!-- <td>{{product.id}}</td> -->
-      <td>{{product.name}}</td>
-      <td>{{product.cost}}</td>
-      <td>{{product.energyValue.proteins}}</td>
-      <td>{{product.energyValue.fats}}</td>
-      <td>{{product.energyValue.carbohydrates}}</td>
-      <td>{{product.energyValue.calories}}</td>
-      <button (click)="delete(product.id)">delete</button>
-    </tr>
-  </tbody>
-</table>
+<div *ngIf="products" class="container">
+  <h4>
+    Продукты
+  </h4>
+  <ul>
+    <li *ngFor="let product of products" (click)="onSelectElement(product)">
+      <div>
+        <span>{{product.name}}</span>
+        <span class="price">{{product.cost}}р.</span>
+      </div>
+      <div class="energy-value"> Б: {{product.energyValue.proteins}}, Ж: {{product.energyValue.fats}},
+        У: {{product.energyValue.carbohydrates}}, ккал: {{product.energyValue.calories}}</div>
+    </li>
+  </ul>
+</div>
 
 <p *ngIf="!products">Loading...</p>
