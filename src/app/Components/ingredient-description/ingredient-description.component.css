@@ -1,0 +1,56 @@
+.container {
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 10px;
+    min-width: 340px;
+}
+
+h1{
+    text-align: center;
+    color: gray;
+}
+
+h2, h3{
+    font-weight: bold;
+}
+
+.button{
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 6px;
+    color: black;
+}
+
+.button-edit{
+    background-color: orange;
+    color: white;
+}
+
+.button-edit:hover{
+    background-color: rgb(255, 195, 83);
+    transition: 0.1s;
+}
+
+.button-delete{
+    background-color: red;
+    color: white;
+    margin-left: 20px;
+}
+
+.button-delete:hover{
+    background-color: rgb(255, 109, 109);
+    transition: 0.1s;
+}
+
+.button-wrapper{
+    margin-top: 20px;
+}
+
+.energy{
+    display: inline-block;
+    background-color: rgb(226, 226, 226);
+    padding:10px;
+    margin-right: 5px;
+    border-radius: 5px;
+}

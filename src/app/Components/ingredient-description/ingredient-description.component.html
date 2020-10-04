@@ -1,0 +1,28 @@
+<div class="container">
+    <h1>Описание</h1>
+    <h2>{{product.name}}</h2>
+    <p>Цена: {{product.cost}} р.</p>
+    <div>
+        <h3>Пищевая ценность:</h3>
+        <div class="energy">
+            <div>Белки: </div>
+            <div>{{product.energyValue.proteins}}</div>
+        </div>
+        <div class="energy">
+            <div>Жиры: </div>
+            <div> {{product.energyValue.fats}}</div>
+        </div>
+        <div class="energy">
+            <div>Углеводы: </div>
+            <div> {{product.energyValue.carbohydrates}} </div>
+        </div>
+        <div class="energy">
+            <div>Ккал: </div>
+            <div>{{product.energyValue.calories}}</div>
+        </div>
+    </div>
+    <div class="button-wrapper">
+        <a href="/" class="button button-edit">Редактировать</a>
+        <a href="/" class="button button-delete">Удалить</a>
+    </div>
+</div>

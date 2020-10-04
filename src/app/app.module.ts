@@ -12,12 +12,14 @@ import { MatSliderModule } from '@angular/material/slider';
 import {MatInputModule} from '@angular/material/input';
 import { ProductEditorComponent } from './Components/product-editor/product-editor.component';
 import { ProductListComponent } from './Components/product-list/product-list.component';
+import { IngredientDescriptionComponent } from './Components/ingredient-description/ingredient-description.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductEditorComponent,
     ProductListComponent,
+    IngredientDescriptionComponent,
   ],
   imports: [
     BrowserModule,
