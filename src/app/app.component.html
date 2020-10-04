@@ -1,3 +1,4 @@
 <product-editor #editor (onAdded)="list.ngOnInit()"></product-editor>
+<create-product></create-product>
 <ingredient-description #description></ingredient-description>
 <product-list (select)="description.setProduct($event)" #list></product-list>

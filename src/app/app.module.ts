@@ -13,6 +13,7 @@ import {MatInputModule} from '@angular/material/input';
 import { ProductEditorComponent } from './Components/product-editor/product-editor.component';
 import { ProductListComponent } from './Components/product-list/product-list.component';
 import { IngredientDescriptionComponent } from './Components/ingredient-description/ingredient-description.component';
+import { CreateProductComponent } from './Components/create-product/create-product.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { IngredientDescriptionComponent } from './Components/ingredient-descript
     ProductEditorComponent,
     ProductListComponent,
     IngredientDescriptionComponent,
+    CreateProductComponent,
   ],
   imports: [
     BrowserModule,
