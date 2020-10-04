@@ -1,0 +1,27 @@
+<table *ngIf="products">
+  <thead>
+    <tr>
+      <!-- <th>Id</th> -->
+      <th>Name</th>
+      <th>Cost</th>
+      <th>Proteins</th>
+      <th>Fats</th>
+      <th>Carbohydrates</th>
+      <th>Calories</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products" (click)="onSelectElement(product)">
+      <!-- <td>{{product.id}}</td> -->
+      <td>{{product.name}}</td>
+      <td>{{product.cost}}</td>
+      <td>{{product.energyValue.proteins}}</td>
+      <td>{{product.energyValue.fats}}</td>
+      <td>{{product.energyValue.carbohydrates}}</td>
+      <td>{{product.energyValue.calories}}</td>
+      <button (click)="delete(product.id)">delete</button>
+    </tr>
+  </tbody>
+</table>
+
+<p *ngIf="!products">Loading...</p>

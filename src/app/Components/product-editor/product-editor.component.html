@@ -1,0 +1,38 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <input type="hidden" formControlName="id">
+    <div>
+        <div>
+            <label>
+                Name:
+                <input name="name" type="text" formControlName="name">
+            </label>
+        </div>
+        <div>
+            <label>
+                Cost:
+                <input name="cost" type="number" formControlName="cost">
+            </label>
+        </div>
+        <div>
+            <label>
+                Proteins:
+                <input name="proteins" type="number" formControlName="proteins">
+            </label>
+        </div>
+        <div>
+            <label>
+                Fats:
+                <input name="fats" type="number" formControlName="fats">
+            </label>
+        </div>
+        <div>
+            <label>
+                Carbohydrates:
+                <input name="carbohydrates" type="number" formControlName="carbohydrates">
+            </label>
+        </div>
+        <div>
+            <button [disabled]="form.invalid" type="submit">Save</button>
+        </div>
+    </div>
+</form>
