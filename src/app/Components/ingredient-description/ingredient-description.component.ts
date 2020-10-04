@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { EnergyValueDto } from 'src/app/Dto/EnergyValueDto';
 import { ProductDto } from 'src/app/Dto/ProductDto';
 
@@ -8,11 +8,15 @@ import { ProductDto } from 'src/app/Dto/ProductDto';
   styleUrls: ['./ingredient-description.component.css']
 })
 export class IngredientDescriptionComponent implements OnInit {
-  product: ProductDto;
-  constructor() { 
-    this.product = new ProductDto(0, 'Any product',123,new EnergyValueDto(1,2,3,4));
+  @Input() product: ProductDto;
+  constructor() {
+    this.product = new ProductDto(0, '', 0, new EnergyValueDto(0, 0, 0, 0));
   }
 
   ngOnInit(): void {
+  }
+
+  setProduct(product: ProductDto) {
+    this.product = product;
   }
 }
