@@ -18,7 +18,6 @@ import { CreateProductComponent } from './Components/create-product/create-produ
 @NgModule({
   declarations: [
     AppComponent,
-    ProductEditorComponent,
     ProductListComponent,
     IngredientDescriptionComponent,
     CreateProductComponent,

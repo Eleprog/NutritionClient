@@ -1,0 +1,47 @@
+.container {
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 10px;
+}
+
+.inputs {
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+.inner-input {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.inner-input span {
+    position: absolute;
+    right: 8px;
+    top: 3px;
+    color: gray;
+}
+
+label {
+    width: 50%;
+    line-height: 35px;
+    vertical-align: middle;
+}
+
+input {
+    width: 50%;
+    height: 20px;
+    border: 1px solid rgb(224, 224, 224);
+    border-radius: 7px;
+    box-shadow: 0;
+    padding: 5px;
+    margin-bottom: 10px;
+    box-shadow: 3px 3px 5px rgb(201, 201, 201);
+}
+
+h1 {
+    color: gray;
+    text-align: center;
+}
