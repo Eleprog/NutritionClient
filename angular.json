@@ -123,5 +123,8 @@
       }
     }
   },
-  "defaultProject": "nutritionClient"
+  "defaultProject": "nutritionClient",
+  "cli": {
+    "analytics": false
+  }
 }

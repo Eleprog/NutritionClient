@@ -1,1 +1,35 @@
-<p>create-product works!</p>
+<div class="container">
+    <h1>Создание нового продукта</h1>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <input type="hidden" formControlName="id">
+        <div class="inputs">
+            <div class="inner-input">
+                <label for="name">Название</label>
+                <input id="name" name="name" type="text" formControlName="name">
+            </div>
+            <div class="inner-input">
+                <label for="cost">Цена</label>
+                <input id="cost" name="cost" type="number" formControlName="cost">
+                <span>р</span>
+            </div>
+            <div class="inner-input">
+                <label for="proteins">Белки</label>
+                <input id="proteins" name="proteins" type="number" formControlName="proteins">
+                <span>г</span>
+            </div>
+            <div class="inner-input">
+                <label for="fats">Жиры</label>
+                <input id="fats" name="fats" type="number" formControlName="fats">
+                <span>г</span>
+            </div>
+            <div class="inner-input">
+                <label for="carbohydrates">Углеводы</label>
+                <input id="carbohydrates" name="carbohydrates" type="number" formControlName="carbohydrates">
+                <span>г</span>
+            </div>
+            <div>
+                <button [disabled]="form.invalid" type="submit">Сохранить</button>
+            </div>
+        </div>
+    </form>
+</div>
