@@ -10,7 +10,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSliderModule } from '@angular/material/slider';
 import {MatInputModule} from '@angular/material/input';
-import { ProductEditorComponent } from './Components/product-editor/product-editor.component';
 import { ProductListComponent } from './Components/product-list/product-list.component';
 import { IngredientDescriptionComponent } from './Components/ingredient-description/ingredient-description.component';
 import { CreateProductComponent } from './Components/create-product/create-product.component';
