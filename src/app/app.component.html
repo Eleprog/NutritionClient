@@ -1,3 +1,20 @@
-<create-product #editor (onAdded)="list.ngOnInit()"></create-product>
-<ingredient-description #description></ingredient-description>
-<product-list (select)="description.setProduct($event)" #list></product-list>
+<header>
+    <nav>
+        <ul>
+            <li routerLinkActive="activeLink" class="link" [routerLinkActiveOptions]="{exact:true}">
+                <a routerLink="">Главная</a>
+            </li>
+            <li routerLinkActive="activeLink" class="link">
+                <a routerLink="/product/create">Создать продукт</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<section>
+    <router-outlet></router-outlet>
+</section>
+<section class="hide">
+    <create-product #editor (onAdded)="list.ngOnInit()"></create-product>
+    <ingredient-description #description></ingredient-description>
+    <product-list (select)="description.setProduct($event)" #list></product-list>
+</section>

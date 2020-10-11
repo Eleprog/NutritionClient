@@ -9,10 +9,16 @@ import { ProductService } from './product.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSliderModule } from '@angular/material/slider';
-import {MatInputModule} from '@angular/material/input';
+import { MatInputModule } from '@angular/material/input';
 import { ProductListComponent } from './Components/product-list/product-list.component';
 import { IngredientDescriptionComponent } from './Components/ingredient-description/ingredient-description.component';
 import { CreateProductComponent } from './Components/create-product/create-product.component';
+import { RouterModule, Routes } from '@angular/router';
+
+const routes: Routes = [
+  { path: '', component: ProductListComponent },
+  { path: 'product/create', component: CreateProductComponent },
+]
 
 @NgModule({
   declarations: [
@@ -29,7 +35,8 @@ import { CreateProductComponent } from './Components/create-product/create-produ
     BrowserAnimationsModule,
     MatFormFieldModule,
     MatSliderModule,
-    MatInputModule
+    MatInputModule,
+    RouterModule.forRoot(routes),
   ],
   providers: [ProductService],
   bootstrap: [AppComponent]

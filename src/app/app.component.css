@@ -1,7 +1,41 @@
-input{
+input {
     margin-left: 10px;
 }
 
-input.ng-touched.ng-invalid{
+input.ng-touched.ng-invalid {
     border-color: red;
-   }
+}
+
+.hide {
+    display: none;
+}
+
+header {
+    box-sizing: content-box;
+    text-align: center;
+}
+
+.link a{
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 1.2em;
+}
+
+nav ul {
+    list-style-type: none;
+    background-color: orange;
+    padding: 5px;
+}
+
+nav ul li{
+    display: inline;
+}
+
+.link a:hover{
+    color: rgb(107, 70, 1);
+}
+
+.activeLink{
+    border-bottom: 7px solid rgb(255, 202, 104);
+}
