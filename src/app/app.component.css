@@ -39,3 +39,11 @@ nav ul li{
 .activeLink{
     border-bottom: 7px solid rgb(255, 202, 104);
 }
+
+.main-section{
+    display:flex;
+}
+
+.left-side{
+    width: 400px;
+}

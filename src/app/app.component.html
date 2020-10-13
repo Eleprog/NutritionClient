@@ -10,9 +10,13 @@
         </ul>
     </nav>
 </header>
-<section>
+<section class="main-section">
+    <aside class="left-side">
+        <product-list (select)="description.setProduct($event)" #list></product-list>
+    </aside>
     <router-outlet></router-outlet>
 </section>
+
 <section class="hide">
     <create-product #editor (onAdded)="list.ngOnInit()"></create-product>
     <ingredient-description #description></ingredient-description>
