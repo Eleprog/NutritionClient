@@ -1,9 +1,11 @@
 <div *ngIf="products" class="container">
+  <ingredient-description *ngIf="selectedProduct" [product]="selectedProduct" (onClose)="clearSelect()"></ingredient-description>
   <h4>
     Продукты
   </h4>
   <ul>
-    <li *ngFor="let product of products" (click)="onSelectElement(product)">
+    <li *ngFor="let product of products" (click)="selectProduct(product)"
+      [ngClass]="{'selected-element': selectedProduct!=null && product.id == selectedProduct.id}">
       <div>
         <span>{{product.name}}</span>
         <span class="price">{{product.cost}}р.</span>

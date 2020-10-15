@@ -1,56 +1,71 @@
 .container {
-    border: 1px solid black;
+    border: 1px solid lightgray;
     border-radius: 10px;
     margin: 5px;
     padding: 10px;
     min-width: 340px;
+    background-color: white;
+    position: relative;
+    box-shadow: 2px 2px 8px gray;
 }
 
-h1{
+.close-button {
+    color: gray;
+    position: absolute;
+    right: 15px;
+    top: 5px;
+    cursor: pointer;
+}
+
+h1 {
     text-align: center;
     color: gray;
 }
 
-h2, h3{
+h2, h3 {
     font-weight: bold;
 }
 
-.button{
+.button {
     text-decoration: none;
     padding: 10px;
     border-radius: 6px;
     color: black;
 }
 
-.button-edit{
+.button-edit {
     background-color: orange;
     color: white;
 }
 
-.button-edit:hover{
+.button-edit:hover {
     background-color: rgb(255, 195, 83);
     transition: 0.1s;
 }
 
-.button-delete{
+.button-delete {
     background-color: red;
     color: white;
     margin-left: 20px;
 }
 
-.button-delete:hover{
+.button-delete:hover {
     background-color: rgb(255, 109, 109);
     transition: 0.1s;
 }
 
-.button-wrapper{
+.button-wrapper {
     margin-top: 20px;
 }
 
-.energy{
+.energy {
     display: inline-block;
     background-color: rgb(226, 226, 226);
-    padding:10px;
+    padding: 10px;
     margin-right: 5px;
     border-radius: 5px;
+}
+
+.hide {
+    display: none;
 }

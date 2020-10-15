@@ -13,12 +13,8 @@ import { MatInputModule } from '@angular/material/input';
 import { ProductListComponent } from './Components/product-list/product-list.component';
 import { IngredientDescriptionComponent } from './Components/ingredient-description/ingredient-description.component';
 import { CreateProductComponent } from './Components/create-product/create-product.component';
-import { RouterModule, Routes } from '@angular/router';
-
-const routes: Routes = [
-  { path: '', component: ProductListComponent },
-  { path: 'product/create', component: CreateProductComponent },
-]
+import { RouterModule } from '@angular/router';
+import { CreateMenuComponent } from './Components/create-menu/create-menu.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +22,7 @@ const routes: Routes = [
     ProductListComponent,
     IngredientDescriptionComponent,
     CreateProductComponent,
+    CreateMenuComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,7 +33,7 @@ const routes: Routes = [
     MatFormFieldModule,
     MatSliderModule,
     MatInputModule,
-    RouterModule.forRoot(routes),
+    RouterModule,
   ],
   providers: [ProductService],
   bootstrap: [AppComponent]

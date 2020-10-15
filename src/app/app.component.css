@@ -46,4 +46,17 @@ nav ul li{
 
 .left-side{
     width: 400px;
+    position: relative;
+}
+
+product-list{
+}
+
+ingredient-description{
+    /* position: absolute; */
+    left: 400px;
+    top: 0px;
+    background-color: white;
+    z-index: 100;
+    /* display:none; */
 }

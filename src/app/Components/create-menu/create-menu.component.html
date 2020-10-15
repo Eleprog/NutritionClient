@@ -1,0 +1,19 @@
+<div class="container">
+    <h1>Меню</h1>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div>
+            <label for="name">Название</label>
+            <input id="name" name="name" type="text" formControlName="name">
+        </div>
+        <hr>
+        <h3>Ингредиенты</h3>
+        <ul>
+            <li>Картофель</li>
+            <li>Хлеб</li>
+            <li>Кофе</li>
+        </ul>
+        <div>
+            <button [disabled]="form.invalid" type="submit">Сохранить</button>
+        </div>
+    </form>
+</div>

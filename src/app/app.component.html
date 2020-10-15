@@ -7,11 +7,15 @@
             <li routerLinkActive="activeLink" class="link">
                 <a routerLink="/product/create">Создать продукт</a>
             </li>
+            <li routerLinkActive="activeLink" class="link">
+                <a routerLink="/menu/create">Создать меню</a>
+            </li>
         </ul>
     </nav>
 </header>
 <section class="main-section">
     <aside class="left-side">
+        <!-- <ingredient-description #description></ingredient-description> -->
         <product-list (select)="description.setProduct($event)" #list></product-list>
     </aside>
     <router-outlet></router-outlet>

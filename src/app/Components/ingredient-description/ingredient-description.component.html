@@ -1,5 +1,6 @@
-<div class="container">
+<div class="container" >
     <h1>Описание</h1>
+    <h2 (click)="close()" class="close-button">x</h2>
     <h2>{{product.name}}</h2>
     <p>Цена: {{product.cost}} р.</p>
     <div>
@@ -22,7 +23,7 @@
         </div>
     </div>
     <div class="button-wrapper">
-        <a href="/" class="button button-edit">Редактировать</a>
+        <a routerLink="/product/create" [queryParams]="{'ingredientId':product.id}" (click)="close()" class="button button-edit">Редактировать</a>
         <a href="/" class="button button-delete">Удалить</a>
     </div>
 </div>

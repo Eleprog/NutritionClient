@@ -9,21 +9,43 @@ import { ProductService } from 'src/app/product.service';
 })
 export class ProductListComponent implements OnInit {
   @Output() select = new EventEmitter<ProductDto>();
-  selectedProduct : ProductDto;
+  selectedProduct: ProductDto;
   products: ProductDto[];
+  isShowDescription: Boolean;
+  selectedId: Number;
 
-  constructor(private productService : ProductService) { }
+  constructor(private productService: ProductService) { }
 
   async ngOnInit() {
     this.products = await this.productService.getAll();
+    this.productService.updateProducts.subscribe(async () => this.products = await this.productService.getAll());
   }
 
-  async delete(id: number){
-    await this.productService.delete(id);
-    this.ngOnInit();
+  selectProduct(product: ProductDto) {
+    if (this.selectedProduct && this.selectedProduct.id == product.id) {
+      this.clearSelect();
+    }
+    else {
+      this.selectedProduct = product;
+    }
   }
 
-  onSelectElement(product:ProductDto){
-    this.select.emit(product);
+  clearSelect() {
+    this.selectedProduct = null;
   }
+
+  // async delete(id: number) {
+  //   await this.productService.delete(id);
+  //   this.ngOnInit();
+  // }
+
+  // onSelectElement(product: ProductDto) {
+  //   this.selectedId = product.id;
+  //   this.select.emit(product);
+  //   this.isShowDescription = this.selectedId > 0;
+  // }
+
+  // clearSelectedElement() {
+  //   this.selectedId = 0;
+  // }
 }
