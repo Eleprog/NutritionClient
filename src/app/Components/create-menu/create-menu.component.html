@@ -8,9 +8,7 @@
         <hr>
         <h3>Ингредиенты</h3>
         <ul>
-            <li>Картофель</li>
-            <li>Хлеб</li>
-            <li>Кофе</li>
+            <li *ngFor="let ingredient of ingredients" >{{ingredient.name}}</li>
         </ul>
         <div>
             <button [disabled]="form.invalid" type="submit">Сохранить</button>

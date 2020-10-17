@@ -1,6 +1,7 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
 import { ProductDto } from 'src/app/Dto/ProductDto';
 import { ProductService } from 'src/app/product.service';
+import { IngredientDescriptionComponent } from '../ingredient-description/ingredient-description.component';
 
 @Component({
   selector: 'product-list',
@@ -27,6 +28,7 @@ export class ProductListComponent implements OnInit {
     }
     else {
       this.selectedProduct = product;
+      this.select.emit(product);
     }
   }
 

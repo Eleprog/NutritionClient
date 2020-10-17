@@ -40,16 +40,10 @@ nav ul li{
     border-bottom: 7px solid rgb(255, 202, 104);
 }
 
-.main-section{
-    display:flex;
-}
-
 .left-side{
     width: 400px;
     position: relative;
-}
-
-product-list{
+    background-color: gray;
 }
 
 ingredient-description{

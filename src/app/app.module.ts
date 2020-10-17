@@ -15,6 +15,7 @@ import { IngredientDescriptionComponent } from './Components/ingredient-descript
 import { CreateProductComponent } from './Components/create-product/create-product.component';
 import { RouterModule } from '@angular/router';
 import { CreateMenuComponent } from './Components/create-menu/create-menu.component';
+import { MenuPageComponent } from './Components/menu-page/menu-page.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { CreateMenuComponent } from './Components/create-menu/create-menu.compon
     IngredientDescriptionComponent,
     CreateProductComponent,
     CreateMenuComponent,
+    MenuPageComponent,
   ],
   imports: [
     BrowserModule,

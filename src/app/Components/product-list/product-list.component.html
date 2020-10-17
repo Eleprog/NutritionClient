@@ -1,5 +1,7 @@
 <div *ngIf="products" class="container">
-  <ingredient-description *ngIf="selectedProduct" [product]="selectedProduct" (onClose)="clearSelect()"></ingredient-description>
+  <ingredient-description *ngIf="selectedProduct" [product]="selectedProduct" (onClose)="clearSelect()">
+    <ng-content></ng-content>
+  </ingredient-description>
   <h4>
     Продукты
   </h4>
